@@ -1,0 +1,8 @@
+{
+   "files.associations": {
+      "*.vape": "lua",
+      "string": "cpp",
+      "vector": "cpp",
+      "ostream": "cpp"
+   }
+}
