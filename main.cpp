@@ -19,6 +19,7 @@ public:
    Vector2 position;
    Vector2 velocity;
    Vector2 polyArray[3];
+   Vector2 polyArray2[3];
    Color polygonColour = RED;
 
    bool locked = false;
@@ -26,15 +27,19 @@ public:
 
    int id = 0;
 
-   float gravity = 1.81f;
+   float gravity = 1.1f;
    float pushRadius = 100.f;
    float mass = 1.f;
    float size = 10.f;
 
    void CreateVertice();
    void Update();
+   void Flush();
 private:
    Vector2 frameVelocity;
+
+   int polygonIDArray[3] = { 0, 0, 0 };
+   int connectedNum;
 };
 
 std::vector<WaterVerticeClass> vertArray(0);
@@ -61,6 +66,7 @@ Vector2 GetAngle(Vector2 startAngle, Vector2 endAngle) {
 void WaterVerticeClass::CreateVertice() {
    id = vertArray.size() + 1;
    polyArray[0] = position;
+   polygonIDArray[0] = id;
    vertArray.resize(vertArray.size() + 1);
    vertArray[vertArray.size() - 1] = *this;
 }
@@ -114,22 +120,76 @@ void WaterVerticeClass::Update() {
    if(position.y < 0)
       position.y = 1;
 
-   polyArray[0] = position;
-   for(int j = 0; j < 2; j++) {
-      float shortDistance = 9999999.f;
+   float shortestDistance = 99999.f;
+   float shortestDistance2 = 99999.f;
 
+   int firstId = 0;
+
+   polyArray[0] = position;
+   polyArray[1] = Vector2{0, 0}; polyArray[2] = Vector2{0, 0};
+
+   polygonIDArray[0] = id;
+   polygonIDArray[1] = 0; polygonIDArray[2] = 0;
+   for(int j = 1; j <= 2; j++) {
       for(unsigned int i = 0; i < vertArray.size(); i++) {
          float distance = GetDistance(position, vertArray[i].position);
-         if(shortDistance > distance && polyArray[j].x != vertArray[i].position.x) {
-            shortDistance = distance;
-            polyArray[j + 1] = vertArray[i].position;
+
+         if(j == 1 && distance < shortestDistance && vertArray[i].id != id && distance < 200 && vertArray[i].polygonIDArray[j] != id) {
+            firstId = vertArray[i].id;
+            shortestDistance = distance;
+            polygonIDArray[j] = id;
+            polyArray[j] = vertArray[i].position;
+         }
+
+         if(j == 2 && distance < shortestDistance2 && distance < 200 && vertArray[i].id != firstId && vertArray[i].id != id  && vertArray[i].polygonIDArray[j] != id) {
+            shortestDistance2 = distance;
+            polygonIDArray[j] = id;
+            polyArray[j] = vertArray[i].position;
          }
       }
    }
 
+   /*
+   polyArray2[0] = position;
+   polyArray2[1] = Vector2{0, 0}; polyArray2[2] = Vector2{0, 0};
+
+   polygonIDArray[0] = id;
+   polygonIDArray[1] = 0; polygonIDArray[2] = 0;
+   for(int j = 1; j <= 2; j++) {
+      for(unsigned int i = 0; i < vertArray.size(); i++) {
+         float distance = GetDistance(position, vertArray[i].position);
+         int ignoreID = 0;
+
+         if(shortestDistance < shortestDistance2)
+            ignoreID = polygonIDArray[2];
+         else ignoreID = polygonIDArray[1];
+            
+
+         shortestDistance = 99999.f;
+         shortestDistance2 = 99999.f;
+         
+
+         if(j == 1 && distance < shortestDistance && vertArray[i].id != id && distance < 200 && vertArray[i].polygonIDArray[j] != id && vertArray[i].id != ignoreID) {
+            firstId = vertArray[i].id;
+            shortestDistance = distance;
+            polygonIDArray[j] = id;
+            polyArray2[j] = vertArray[i].position;
+         }
+
+         if(j == 2 && distance < shortestDistance2 && distance < 200 && vertArray[i].id != firstId && vertArray[i].id != id  && vertArray[i].polygonIDArray[j] != id && vertArray[i].id != ignoreID) {
+            shortestDistance2 = distance;
+            polygonIDArray[j] = id;
+            polyArray2[j] = vertArray[i].position;
+         }
+      }
+   }
+   */
+   
 }
 
-
+void WaterVerticeClass::Flush() {
+   
+}
 
 int main(void)
 {
@@ -141,7 +201,7 @@ int main(void)
    string framesPerSecond;
    string timeSinceInitialization;
 
-   // SetConfigFlags(FLAG_WINDOW_RESIZABLE);
+   SetConfigFlags(FLAG_WINDOW_RESIZABLE);
    // SetConfigFlags(FLAG_MSAA_4X_HINT);
    
    InitWindow(screenWidth, screenHeight, "Fluid :D");
@@ -149,19 +209,21 @@ int main(void)
    SetTargetFPS(144);
 
    WaterVerticeClass vertice;
-
-   // floor to push them up
    
    
    vertice.pushRadius = 400.f;
    vertice.polygonColour = BLACK;
-   vertice.size = 20.f;
+   vertice.size = 40.f;
+   vertice.locked = true;
+   vertice.visible = true;
    vertice.CreateVertice();
 
-   vertice.pushRadius = 100.f;
+   vertice.visible = false;
+   vertice.locked = false;
+   vertice.pushRadius = 50.f;
    vertice.polygonColour = RED;
-   vertice.size = 10.f;
-   for(unsigned int i = 0; i < 200; i++) {
+   vertice.size = 5.f;
+   for(unsigned int i = 0; i < 400; i++) {
       vertice.position = Vector2{((float)GetScreenWidth() / 2) + i, ((float)GetScreenHeight() / 2) + i};
       vertice.CreateVertice();
    }
@@ -173,15 +235,11 @@ int main(void)
       framesPerSecond = std::to_string(GetFPS());
 
 
-
       for(unsigned int i = 0; i < vertArray.size(); i++)
          vertArray[i].Update();
 
       if(IsMouseButtonPressed(0))
          vertArray[0].position = GetMousePosition();
-      
-      if(IsMouseButtonPressed(1))
-         vertArray[1].position = GetMousePosition();
 
       // Rendering
       //----------------------------------------------------------------------------------
@@ -190,19 +248,30 @@ int main(void)
          ClearBackground(RAYWHITE);
 
          for(unsigned int i = 0; i < vertArray.size(); i++) {
+            
             if(vertArray[i].visible) {
                DrawCircle( vertArray[i].position.x,
                            vertArray[i].position.y,
                            vertArray[i].size,
                            vertArray[i].polygonColour);
             }
+            
 
-            /*
+            
             DrawTriangle(vertArray[i].polyArray[0],
                          vertArray[i].polyArray[1],
                          vertArray[i].polyArray[2],
                          BLUE);
-            */
+
+            DrawTriangle(vertArray[i].polyArray2[0],
+                         vertArray[i].polyArray2[1],
+                         vertArray[i].polyArray2[2],
+                         RED);
+
+            DrawCircle(vertArray[i].polyArray[0].x, vertArray[i].polyArray[0].y, vertArray[i].size, RED);
+            DrawCircle(vertArray[i].polyArray[1].x, vertArray[i].polyArray[1].y, vertArray[i].size, GREEN);
+            DrawCircle(vertArray[i].polyArray[2].x, vertArray[i].polyArray[2].y, vertArray[i].size, YELLOW);
+            
          }
 
          DrawText(framesPerSecond.c_str(), 10, 40, 20, DARKGRAY);

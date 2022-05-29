@@ -1,0 +1,6 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/Oskar/Desktop/Programming/C/Raylib/fluid'
+g++ main.cpp -o fluid.exe -O1 -Wall -Wno-missing-braces -I include/ -L lib/ -lraylib -lopengl32 -lgdi32 -lwinmm
+.\fluid.exe
+make: Leaving directory '/home/Oskar/Desktop/Programming/C/Raylib/fluid'
+ 

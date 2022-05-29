@@ -1,0 +1,317 @@
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
+# GNU Make 4.3
+# Built for x86_64-pc-msys
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+ 
+
+# Make data base, printed on Sun May 29 14:15:02 2022
+
+# Variables
+
+# environment
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
+ 
+# environment
+SYSTEMDRIVE = C:
+# environment
+JAVA_HOME = C:\Program Files\Eclipse Adoptium\jdk-17.0.2.8-hotspot\
+# environment
+LC_ALL = C
+# makefile (from 'makefile', line 5)
+MAINFILE = main.cpp
+# environment
+USERPROFILE = C:\Users\Oskar
+# environment
+LOCALAPPDATA = C:\Users\Oskar\AppData\Local
+# environment
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-67954d4d-6d67-4cf0-a914-bd99015adf24-sock
+# environment
+VSCODE_CWD = C:\Users\Oskar\AppData\Local\Programs\Microsoft VS Code
+# environment
+SYSTEMROOT = C:\WINDOWS
+# environment
+PROCESSOR_LEVEL = 6
+# environment
+PSMODULEPATH = C:\Program Files (x86)\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules;C:\Program Files (x86)\AutoIt3\AutoItX
+# default
+MAKE_COMMAND := make
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_17060_BUAIIFNRVMRTJXLZ
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+VSCODE_LOG_STACK = false
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = C:\Users\Oskar\AppData\Roaming\Code\CachedData\c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+# makefile (from 'makefile', line 4)
+PROJECTNAME = fluid
+# environment
+LANG = C
+# default
+.LOADED := 
+# environment
+TMP = /home/Oskar/AppData/Local/Temp
+# default
+.INCLUDE_DIRS = /usr/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# environment
+ONEDRIVE = C:\Users\Oskar\OneDrive
+# environment
+INTELLIJ IDEA COMMUNITY EDITION = C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.1.2\bin;
+# environment
+DEVKITARM = /opt/devkitpro/devkitARM
+# makefile
+CURDIR := /home/Oskar/Desktop/Programming/C/Raylib/fluid
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+PROGRAMFILES = C:\Program Files
+# environment
+MFLAGS = -pqrR
+# default
+.SHELLFLAGS := -c
+# environment
+!C: = c:\Users\Oskar\Desktop\Programming\C\Raylib\fluid
+# environment
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# makefile (from 'makefile', line 1)
+MAKEFILE_LIST := makefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 17060
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+DEVKITPPC = /opt/devkitpro/devkitPPC
+# automatic
+*F = $(notdir $*)
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-gb","availableLanguages":{},"_languagePackSupport":true}
+# environment
+ONEDRIVECONSUMER = C:\Users\Oskar\OneDrive
+# default
+MAKE_HOST := x86_64-pc-msys
+# environment
+PROGRAMDATA = C:\ProgramData
+# default
+SHELL := /bin/sh
+# environment
+HOMEPATH = \Users\Oskar
+# default
+MAKECMDGOALS := all
+# environment
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# environment
+COMSPEC = C:\WINDOWS\system32\cmd.exe
+# environment
+WINDIR = C:\WINDOWS
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /c/Program Files/Eclipse Adoptium/jdk-17.0.2.8-hotspot/bin:/opt/devkitpro/msys2/usr/bin:/c/Program Files/Microsoft/jdk-11.0.12.7-hotspot/bin:/c/Program Files/Eclipse Foundation/jdk-8.0.302.8-hotspot/bin:/c/Program Files/Common Files/Oracle/Java/javapath:/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn:/c/Program Files/nodejs:/c/Program Files/Git/cmd:/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/c/Gradle/gradle-7.1/bin:/c/msys64/mingw64/bin:/c/Program Files/Go/bin:/c/Program Files/dotnet:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/LLVM/bin:/c/Program Files/PuTTY:/c/Program Files/Microsoft SQL Server/150/Tools/Binn:/c/Program Files/CMake/bin:/home/Oskar/.cargo/bin:/home/Oskar/AppData/Local/Programs/Python/Python39/Scripts:/home/Oskar/AppData/Local/Programs/Python/Python39:/home/Oskar/AppData/Local/Microsoft/WindowsApps:/home/Oskar/.dotnet/tools:/c/Program Files/JetBrains/PyCharm Community Edition 2020.3.3/bin:/home/Oskar/AppData/Roaming/npm:/home/Oskar/AppData/Local/GitHubDesktop/bin:/home/Oskar/AppData/Local/atom/bin:/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2021.1.2/bin:/home/Oskar/AppData/Local/Programs/Microsoft VS Code/bin:/c/MinGW/mingw32/bin:/home/Oskar/go/bin:/home/Oskar/AppData/Local/Microsoft/WindowsApps:/home/Oskar/.dotnet/tools:/c/MinGW/bin:/home/Oskar/Desktop/hashcat-6.2.5:/c/Lua:/c/Program Files/Make/bin
+# environment
+ZES_ENABLE_SYSMAN = 1
+# environment
+COMPUTERNAME = DESKTOP-MPTPSTM
+# default
+MAKEFILES := 
+# makefile (from 'makefile', line 1)
+.PHONY = clean
+# automatic
+^F = $(notdir $^)
+# environment
+PROMPT = $P$G
+# makefile (from 'makefile', line 7)
+current_dir = &(shell pwd)
+# environment
+LOGONSERVER = \\DESKTOP-MPTPSTM
+# environment
+VSCODE_LOG_NATIVE = false
+# environment
+USERNAME = Oskar
+# environment
+COMMONPROGRAMFILES = C:\Program Files\Common Files
+# automatic
+?F = $(notdir $?)
+# environment
+PROGRAMW6432 = C:\Program Files
+# environment
+DEVKITPRO = /opt/devkitpro
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+# automatic
++F = $(notdir $+)
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+USERDOMAIN = DESKTOP-MPTPSTM
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+OS = Windows_NT
+ 
+# makefile
+.DEFAULT_GOAL := main
+# default
+MAKE_VERSION := 4.3
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# environment
+USERDOMAIN_ROAMINGPROFILE = DESKTOP-MPTPSTM
+# environment
+NUMBER_OF_PROCESSORS = 12
+# environment
+PUBLIC = C:\Users\Public
+# environment
+ASL.LOG = Destination=file
+# environment
+APPDATA = C:\Users\Oskar\AppData\Roaming
+# environment
+HOMEDRIVE = C:
+# environment
+PROCESSOR_ARCHITECTURE = AMD64
+# environment
+PYCHARM COMMUNITY EDITION = C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.3\bin;
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+HOME = /home/Oskar
+# environment
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+TEMP = /home/Oskar/AppData/Local/Temp
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\b39678251c8e999112965e2550e5fe8b-1.67.2-main-sock
+# environment
+TERM = xterm-256color
+# environment
+DXSDK_DIR = C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+ALLUSERSPROFILE = C:\ProgramData
+# environment
+SESSIONNAME = Console
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# environment
+PROCESSOR_REVISION = a503
+# makefile (from 'makefile', line 3)
+CC = g++
+# environment
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 165 Stepping 3, GenuineIntel
+# variable set hash-table stats:
+# Load=111/1024=11%, Rehash=0, Collisions=13/138=9%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 1190363414, inode 8162774324727208): 9 files, no impossibilities.
+
+# 9 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 15):
+	@rm ${PROJECTNAME}.exe
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+main.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+main: main.cpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 10):
+	@${CC} ${MAINFILE} -o ${PROJECTNAME}.exe -O1 -Wall -Wno-missing-braces -I include/ -L lib/ -lraylib -lopengl32 -lgdi32 -lwinmm
+	.\${PROJECTNAME}.exe
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-05-29 14:14:08.177923
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=7/1024=1%, Rehash=0, Collisions=0/18=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 15 / storage = 105 B / avg = 7 B
+# current buf: size = 8162 B / used = 105 B / count = 15 / avg = 7 B
+
+# strcache performance: lookups = 22 / hit rate = 31%
+# hash-table stats:
+ 
+# Load=15/8192=0%, Rehash=0, Collisions=0/22=0%
+# Finished Make data base on Sun May 29 14:15:02 2022
+
+ 

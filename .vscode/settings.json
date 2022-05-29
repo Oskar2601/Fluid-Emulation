@@ -3,6 +3,7 @@
       "*.vape": "lua",
       "string": "cpp",
       "vector": "cpp",
-      "ostream": "cpp"
+      "ostream": "cpp",
+      "xutility": "cpp"
    }
 }
