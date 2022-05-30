@@ -9,13 +9,13 @@ make: *** No rule to make target 'all'.  Stop.
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Sun May 29 14:15:02 2022
+# Make data base, printed on Mon May 30 19:14:28 2022
 
 # Variables
+ 
 
 # environment
 FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
- 
 # environment
 SYSTEMDRIVE = C:
 # environment
@@ -29,7 +29,7 @@ USERPROFILE = C:\Users\Oskar
 # environment
 LOCALAPPDATA = C:\Users\Oskar\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-67954d4d-6d67-4cf0-a914-bd99015adf24-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-6b2a81be-4841-4984-a77b-2347b4faf4ab-sock
 # environment
 VSCODE_CWD = C:\Users\Oskar\AppData\Local\Programs\Microsoft VS Code
 # environment
@@ -43,7 +43,7 @@ MAKE_COMMAND := make
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_17060_BUAIIFNRVMRTJXLZ
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_13780_BANPBBTRFTLRTFZZ
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -83,7 +83,7 @@ CURDIR := /home/Oskar/Desktop/Programming/C/Raylib/fluid
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -105,7 +105,7 @@ MAKEFILE_LIST := makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 17060
+VSCODE_PID = 13780
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
@@ -180,7 +180,6 @@ USERDOMAIN = DESKTOP-MPTPSTM
 GNUMAKEFLAGS := 
 # environment
 OS = Windows_NT
- 
 # makefile
 .DEFAULT_GOAL := main
 # default
@@ -194,6 +193,7 @@ NUMBER_OF_PROCESSORS = 12
 # environment
 PUBLIC = C:\Users\Public
 # environment
+ 
 ASL.LOG = Destination=file
 # environment
 APPDATA = C:\Users\Oskar\AppData\Roaming
@@ -238,6 +238,7 @@ CC = g++
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 165 Stepping 3, GenuineIntel
 # variable set hash-table stats:
+ 
 # Load=111/1024=11%, Rehash=0, Collisions=13/138=9%
 
 # Pattern-specific Variable Values
@@ -310,8 +311,7 @@ makefile:
 
 # strcache performance: lookups = 22 / hit rate = 31%
 # hash-table stats:
- 
 # Load=15/8192=0%, Rehash=0, Collisions=0/22=0%
-# Finished Make data base on Sun May 29 14:15:02 2022
+# Finished Make data base on Mon May 30 19:14:28 2022
 
  
