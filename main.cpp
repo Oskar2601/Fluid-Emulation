@@ -27,7 +27,7 @@ public:
 
    int id = 0;
 
-   float physicsSpeed = 10.f;
+   float physicsSpeed = 150.f;
    float gravity = 1.f;
    float pushRadius = 100.f;
    float mass = 1.f;
@@ -46,16 +46,15 @@ private:
 std::vector<WaterVerticeClass> vertArray(0);
 
 
-float GetDistance(Vector2 startPoint, Vector2 endPoint) {
+__forceinline float GetDistance(Vector2 startPoint, Vector2 endPoint) {
    return sqrt(pow((endPoint.x - startPoint.x), 2) + pow((endPoint.y - startPoint.y), 2));
 }
 
-float Map(float val, float in1, float in2, float out1, float out2)
-{
+__forceinline float Map(float val, float in1, float in2, float out1, float out2) {
    return out1 + (val - in1) * (out2 - out1) / (in2 - in1);
 }
 
-Vector2 GetAngle(Vector2 startAngle, Vector2 endAngle) {
+__forceinline Vector2 GetAngle(Vector2 startAngle, Vector2 endAngle) {
    float radiansAngle = atan2(endAngle.y - startAngle.y, endAngle.x - startAngle.x);
    Vector2 vectorAngle = Vector2{(float)cos(radiansAngle), (float)sin(radiansAngle)};
 
@@ -113,25 +112,27 @@ void WaterVerticeClass::Update() {
    }
 
 
-   velocity.x += 4.f / (GetDistance(position, Vector2{0, position.y}) + 1);
-   velocity.x -= 4.f / (GetDistance(position, Vector2{(float)GetScreenWidth(), position.y}) + 1);
-   frameVelocity.y -= 100.f / (GetDistance(position, Vector2{position.x, (float)GetScreenHeight()}) + 1);
-   frameVelocity.y += gravity;
-
-   position.x = position.x + (frameVelocity.x + (velocity.x / 100)) * deltaTime * 150;
+   //velocity.x += 4.f / (GetDistance(position, Vector2{0, position.y}) + 1);
+   //velocity.x -= 4.f / (GetDistance(position, Vector2{(float)GetScreenWidth(), position.y}) + 1);
+   float screenHeight = (float)GetScreenHeight();
+   float screenWidth = (float)GetScreenWidth();
+   mass = 0.001f * (GetDistance(position, Vector2{position.x, screenHeight}));
+   
+   frameVelocity.y -= 100.f / (screenHeight + 50 - position.y + 1);
    position.y = position.y + (frameVelocity.y + (velocity.y / 100)) * deltaTime * 150;
 
 
-   velocity = Vector2{velocity.x - velocity.x / 100, velocity.y - velocity.y / 100};
+   //velocity = Vector2{velocity.x - velocity.x / 100, velocity.y - velocity.y / 100};
+   position.y = position.y + gravity * deltaTime * mass * physicsSpeed;
 
-   if(position.x > (float)GetScreenWidth())
-      position.x = (float)GetScreenWidth();
+   if(position.x > screenWidth)
+      position.x = screenWidth;
 
    if(position.x < 0)
       position.x = 0;
 
-   if(position.y > (float)GetScreenHeight()) {
-      position.y = (float)GetScreenHeight();
+   if(position.y > screenHeight) {
+      position.y = screenHeight;
       velocity = Vector2{velocity.x, velocity.y -5.f};
    }
    
@@ -210,10 +211,10 @@ int main(void)
 
    vertice.locked = false;
    vertice.size = 2.f;
-   vertice.pushRadius = vertice.size - 0.5f;
+   vertice.pushRadius = vertice.size + 3.f;
    vertice.polygonColour = RED;
    
-   for(unsigned int i = 0; i < 1000; i++) {
+   for(unsigned int i = 0; i < 2500; i++) {
       vertice.position = Vector2{((float)GetScreenWidth() / 2) + (i / 10), ((float)GetScreenHeight() / 2) + (i / 10)};
       vertice.CreateVertice();
    }
@@ -241,19 +242,13 @@ int main(void)
 
          ClearBackground(Color{0, 0, 9});
 
-         for(unsigned int i = 0; i < vertArray.size(); i++) {
-            
+         for(unsigned int i = 0; i < vertArray.size(); i++)
             if(vertArray[i].visible) {
                DrawCircle( vertArray[i].position.x,
                            vertArray[i].position.y,
                            vertArray[i].size,
                            vertArray[i].polygonColour);
             }
-            
-
-
-            
-         }
 
          DrawText(framesPerSecond.c_str(), 10, 40, 20, DARKGRAY);
          DrawText(timeSinceInitialization.c_str(), 10, 10, 20, DARKGRAY);

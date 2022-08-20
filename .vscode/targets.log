@@ -9,10 +9,9 @@ make: *** No rule to make target 'all'.  Stop.
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Mon May 30 19:14:28 2022
+# Make data base, printed on Sat Aug 20 16:39:10 2022
 
 # Variables
- 
 
 # environment
 FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
@@ -29,8 +28,6 @@ USERPROFILE = C:\Users\Oskar
 # environment
 LOCALAPPDATA = C:\Users\Oskar\AppData\Local
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-6b2a81be-4841-4984-a77b-2347b4faf4ab-sock
-# environment
 VSCODE_CWD = C:\Users\Oskar\AppData\Local\Programs\Microsoft VS Code
 # environment
 SYSTEMROOT = C:\WINDOWS
@@ -43,8 +40,9 @@ MAKE_COMMAND := make
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_13780_BANPBBTRFTLRTFZZ
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_5424_NZJBRKXKWUFDJBKD
 # environment
+ 
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
@@ -54,12 +52,10 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 %D = $(patsubst %/,%,$(dir $%))
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
-# environment
-VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\Oskar\AppData\Roaming\Code\CachedData\c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
+VSCODE_CODE_CACHE_PATH = C:\Users\Oskar\AppData\Roaming\Code\CachedData\e4503b30fc78200f846c62cf8091b76ff5547662
 # makefile (from 'makefile', line 4)
 PROJECTNAME = fluid
 # environment
@@ -81,9 +77,7 @@ DEVKITARM = /opt/devkitpro/devkitARM
 # makefile
 CURDIR := /home/Oskar/Desktop/Programming/C/Raylib/fluid
 # environment
-VSCODE_PIPE_LOGGING = true
-# environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -103,9 +97,7 @@ MAKEFILE_LIST := makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
-VSCODE_PID = 13780
+VSCODE_PID = 5424
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
@@ -139,7 +131,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = /c/Program Files/Eclipse Adoptium/jdk-17.0.2.8-hotspot/bin:/opt/devkitpro/msys2/usr/bin:/c/Program Files/Microsoft/jdk-11.0.12.7-hotspot/bin:/c/Program Files/Eclipse Foundation/jdk-8.0.302.8-hotspot/bin:/c/Program Files/Common Files/Oracle/Java/javapath:/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn:/c/Program Files/nodejs:/c/Program Files/Git/cmd:/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/c/Gradle/gradle-7.1/bin:/c/msys64/mingw64/bin:/c/Program Files/Go/bin:/c/Program Files/dotnet:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/LLVM/bin:/c/Program Files/PuTTY:/c/Program Files/Microsoft SQL Server/150/Tools/Binn:/c/Program Files/CMake/bin:/home/Oskar/.cargo/bin:/home/Oskar/AppData/Local/Programs/Python/Python39/Scripts:/home/Oskar/AppData/Local/Programs/Python/Python39:/home/Oskar/AppData/Local/Microsoft/WindowsApps:/home/Oskar/.dotnet/tools:/c/Program Files/JetBrains/PyCharm Community Edition 2020.3.3/bin:/home/Oskar/AppData/Roaming/npm:/home/Oskar/AppData/Local/GitHubDesktop/bin:/home/Oskar/AppData/Local/atom/bin:/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2021.1.2/bin:/home/Oskar/AppData/Local/Programs/Microsoft VS Code/bin:/c/MinGW/mingw32/bin:/home/Oskar/go/bin:/home/Oskar/AppData/Local/Microsoft/WindowsApps:/home/Oskar/.dotnet/tools:/c/MinGW/bin:/home/Oskar/Desktop/hashcat-6.2.5:/c/Lua:/c/Program Files/Make/bin
+PATH = /c/Program Files/Eclipse Adoptium/jdk-17.0.2.8-hotspot/bin:/opt/devkitpro/msys2/usr/bin:/c/Program Files/Microsoft/jdk-11.0.12.7-hotspot/bin:/c/Program Files/Eclipse Foundation/jdk-8.0.302.8-hotspot/bin:/c/Program Files/Common Files/Oracle/Java/javapath:/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/c/Windows/system32:/c/Windows:/c/Windows/System32/Wbem:/c/Windows/System32/WindowsPowerShell/v1.0:/c/Windows/System32/OpenSSH:/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/Microsoft SQL Server/130/Tools/Binn:/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn:/c/Program Files/nodejs:/c/Program Files/Git/cmd:/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/c/Gradle/gradle-7.1/bin:/c/msys64/mingw64/bin:/c/Program Files/dotnet:/c/WINDOWS/system32:/c/WINDOWS:/c/WINDOWS/System32/Wbem:/c/WINDOWS/System32/WindowsPowerShell/v1.0:/c/WINDOWS/System32/OpenSSH:/c/Program Files/LLVM/bin:/c/Program Files/PuTTY:/c/Program Files/Microsoft SQL Server/150/Tools/Binn:/c/Program Files/CMake/bin:/home/Oskar/.cargo/bin:/home/Oskar/AppData/Local/Programs/Python/Python39/Scripts:/home/Oskar/AppData/Local/Programs/Python/Python39:/home/Oskar/AppData/Local/Microsoft/WindowsApps:/home/Oskar/.dotnet/tools:/c/Program Files/JetBrains/PyCharm Community Edition 2020.3.3/bin:/home/Oskar/AppData/Roaming/npm:/home/Oskar/AppData/Local/GitHubDesktop/bin:/home/Oskar/AppData/Local/atom/bin:/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2021.1.2/bin:/home/Oskar/AppData/Local/Programs/Microsoft VS Code/bin:/c/MinGW/mingw32/bin:/home/Oskar/AppData/Local/Microsoft/WindowsApps:/home/Oskar/.dotnet/tools:/c/MinGW/bin:/home/Oskar/Desktop/hashcat-6.2.5:/c/Lua:/c/Program Files/Make/bin
 # environment
 ZES_ENABLE_SYSMAN = 1
 # environment
@@ -156,8 +148,6 @@ PROMPT = $P$G
 current_dir = &(shell pwd)
 # environment
 LOGONSERVER = \\DESKTOP-MPTPSTM
-# environment
-VSCODE_LOG_NATIVE = false
 # environment
 USERNAME = Oskar
 # environment
@@ -186,6 +176,7 @@ OS = Windows_NT
 MAKE_VERSION := 4.3
 # environment
 PROGRAMFILES(X86) = C:\Program Files (x86)
+ 
 # environment
 USERDOMAIN_ROAMINGPROFILE = DESKTOP-MPTPSTM
 # environment
@@ -193,7 +184,6 @@ NUMBER_OF_PROCESSORS = 12
 # environment
 PUBLIC = C:\Users\Public
 # environment
- 
 ASL.LOG = Destination=file
 # environment
 APPDATA = C:\Users\Oskar\AppData\Roaming
@@ -214,7 +204,7 @@ ELECTRON_RUN_AS_NODE = 1
 # environment
 TEMP = /home/Oskar/AppData/Local/Temp
 # environment
-VSCODE_IPC_HOOK = \\.\pipe\b39678251c8e999112965e2550e5fe8b-1.67.2-main-sock
+VSCODE_IPC_HOOK = \\.\pipe\b39678251c8e999112965e2550e5fe8b-1.70.2-main-sock
 # environment
 TERM = xterm-256color
 # environment
@@ -238,8 +228,7 @@ CC = g++
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 165 Stepping 3, GenuineIntel
 # variable set hash-table stats:
- 
-# Load=111/1024=11%, Rehash=0, Collisions=13/138=9%
+# Load=106/1024=10%, Rehash=0, Collisions=12/133=9%
 
 # Pattern-specific Variable Values
 
@@ -296,6 +285,7 @@ makefile:
 #  Implicit rule search has been done.
 #  Last modified 2022-05-29 14:14:08.177923
 #  File has been updated.
+ 
 #  Successfully updated.
 
 # files hash-table stats:
@@ -312,6 +302,6 @@ makefile:
 # strcache performance: lookups = 22 / hit rate = 31%
 # hash-table stats:
 # Load=15/8192=0%, Rehash=0, Collisions=0/22=0%
-# Finished Make data base on Mon May 30 19:14:28 2022
+# Finished Make data base on Sat Aug 20 16:39:10 2022
 
  
